@@ -5,4 +5,21 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
 	
+    var importe;
+
+    var descuento;
+
+    var resultado;
+
+       importe = parseInt(document.getElementById("importe").value;
+
+        descuento = importe * 0.25;
+
+        resultado = importe - descuento;
+
+        alert("El descuento es: " + resultado);
+
+
+
+
 }

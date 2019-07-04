@@ -3,30 +3,20 @@ transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
-   
-
-    
-        var numeroUno;
-
-         numeroUno = prompt("escribir 1 Numero:");
-
-         document.getElementById("numeroUno").value = numeroUno;
-
-         var numeroDos;
-
-         numeroDos = prompt("escribir 1 Numero:");
-
-         document.getElementById("numeroDos").value = numeroDos; 
-
-         numeroUno = document.getElementById("numeroUno");
-         
-         numeroDos = document.getElementById("numeroDos");
-
-         
 
 
-         
-        
+    var num1;
+
+    var num2;
+
+    var resultado;
+
+         num1 = parseInt(document.getElementById("numeroUno").value);
+
+         num2 = parseInt(document.getElementById("numeroDos").value);
+
+        alert(num1 + num2);
+
 
 
 

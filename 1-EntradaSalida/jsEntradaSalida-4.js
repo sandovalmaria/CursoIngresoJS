@@ -5,12 +5,5 @@
 function mostrar()
 {
 
-	 var nombre;
-	 
-	 nombre = prompt("Ingrese Nombre");
-
-	 document.getElementById("elNombre").value = nombre;
-
-	 
 }
 
