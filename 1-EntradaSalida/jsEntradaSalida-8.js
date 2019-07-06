@@ -15,9 +15,10 @@ function SacarResto()
 
          num2 = parseInt(document.getElementById("numeroDivisor").value);
 
-        
+        // el % es el resto de la division de var1 y var2
          resultado = num1 % num2;
 
+         //solo muestra el resto
         alert("el resto es: " + resultado);
 
 	

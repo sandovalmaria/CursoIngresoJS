@@ -14,8 +14,12 @@ function sumar()
 
          num2 = parseInt(document.getElementById("numeroDos").value);
 
+
+         // una vez q establesco las variables, la ruta de ID, y la transformo en numero
+         // solo tengo q poner var1 (signo q deseo) var2
          resultado = num1 + num2;
 
+        
         alert("el resultado es: " + resultado);
 
 
