@@ -4,11 +4,16 @@ function mostrar()
 
     var edad;
 
-    // Esta persona es mayor(>) q x
-    if(edad>18);
+    // Esta persona es mayor(>) q x (no olvidar declararlo como numero)
 
-        { 
-            alert("esta persona es mayor de 18");
-        }
+    edad = parseInt(document.getElementById("edad").value);
+   
+        if (edad >= 18)
+
+            { 
+                
+                alert("esta persona es mayor de 18");
+
+            }
 
 }//FIN DE LA FUNCIÓN

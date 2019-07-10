@@ -4,19 +4,24 @@ function mostrar()
 
     var edad;
 
-     
-    if (edad>18)
+    edad = parseInt(document.getElementById("edad").value);
     
-    {
+    // no cerrar con ";" el if sino no se ejecuta
+        if (edad>=18)
+    
+             {
         
-        alert("esta persona es mayor de edad");
-    }
+                alert("esta persona es mayor de edad");
+             }
     
-    else (edad<18)
+
+    // "else" no lleva condicion ya q si el if es falso se ejecuta el else
+        else
     
-    {
-        
-        alert("Esta persona es menor de edad");
-    }
+            {
+            
+                 alert("Esta persona es menor de edad");
+
+            }
 
 }//FIN DE LA FUNCIÓN
