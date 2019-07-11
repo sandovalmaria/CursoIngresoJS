@@ -1,10 +1,9 @@
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	
-
+	//creo la var nota
 	var nota;
-	// obtengo numero aleatorio 
+	
+	// Genero el número RANDOM entre 1 y 10  obtengo numero aleatorio 
 	nota = Math.floor(Math.random()* 10 + 1);
 
 	//informa si la nota es 9 o mayor
