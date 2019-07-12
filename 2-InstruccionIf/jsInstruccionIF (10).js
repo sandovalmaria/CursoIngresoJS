@@ -25,7 +25,7 @@ function mostrar()
 	// si entra aca es xq la nota es menor a 4
 		else
 		{
-			alert("Nota: " + nota + " desaprobo");
+			alert("Nota: " + nota + " Vamos, la proxima se puede");
 		}
 
 

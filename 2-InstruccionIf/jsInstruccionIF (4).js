@@ -8,7 +8,7 @@ var edad;
 edad = parseInt(document.getElementById("edad").value);
 
 // si el numero ingresado es mayor a 13 pero menor a 18 tira el alerta sino no hace nada
-if (edad > 13 && edad < 18)
+if (edad >= 13 && edad < 18)
 
 {
 

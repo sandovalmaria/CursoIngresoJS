@@ -14,7 +14,7 @@ edad = parseInt(document.getElementById("edad").value);
 estado = document.getElementById("estadoCivil").value;
 
 // es mayor de 18 y "diferente" de soltero tira el alert
-if (edad >18 && estado!="Soltero")
+if (edad >=18 && estado!="Soltero")
 
 {
     alert("Es mayor y no es soltero");
