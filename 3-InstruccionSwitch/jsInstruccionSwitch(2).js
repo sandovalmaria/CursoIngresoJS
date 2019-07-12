@@ -1,8 +1,13 @@
 function mostrar()
 {
-//tomo la edad  
-var mes = document.getElementById("mes").value;
-// no cerrar con ";""
+//creo la var mes 
+var mes;
+
+// al valor q seleccionen con el ID"mes" lo guardo en el var mes 
+mes = document.getElementById("mes").value;
+
+
+// no cerrar el switch con ";"" y no olvidar las llaves "{}"
 switch (mes)
 {
     case "Enero":
@@ -21,6 +26,11 @@ switch (mes)
         break;
     // se va a repetir el mensaje hasta q se ejecute un break asiq el mismo mensaje 
     // sirve para todos
+
+
+    //aca comienza un nuevo case q va a ejecutar el mismo alerta para todos y 
+    //se va a detener recien cuando cierre con break;
+
     case "Julio":
 
     case "Agosto":
@@ -28,6 +38,8 @@ switch (mes)
         alert("Abrigate que hace frio");
         break;
 
+
+    //aca comienza un nuevo case
     case "Septiembre":
 
     case "Octubre":
