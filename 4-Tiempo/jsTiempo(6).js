@@ -1,24 +1,24 @@
-var miTemporizador ;
-var contador=0;
+var numero;
+var suma=0;
+var promedio;
+var contador = 0
 
-function inicio()
+
+while ( contador < 5)
+
 {
-	document.getElementById("secreto").style.visibility="hidden";
-	alert("function inicio.");
-	miTemporizador = setTimeout(SegundosEnElAire, 3000);
-	
-}//FIN DE LA FUNCIÓN inicio
+numero = parseInt(prompt("ingrese un numero: "));
 
-function SegundosEnElAire() {
+suma += numero;
+contador ++;
 
-	document.getElementById("secreto").style.visibility="visible"; 
-    alert("Bienvenido a la UTN FRA");
-   
-}//FIN DE LA FUNCIÓN SegundosEnElAire
+}
 
-function fin()
-{
-	alert("function fin.");
-	clearTimeout(miIntervalo);
+promedio = suma/5
+
+document.getElementById("suma").value = suma;
+
+document.getElementById("suma").value =  promedio;
+
 
 }//FIN DE LA FUNCIÓN fin
