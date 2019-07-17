@@ -1,15 +1,15 @@
 var numero;
-var suma=0;
+var suma = 0;
 var promedio;
 var contador = 0
 
 
-while ( contador < 5)
+while (contador<5)
 
 {
 numero = parseInt(prompt("ingrese un numero: "));
 
-suma += numero;
+suma = suma + numero;
 contador ++;
 
 }
