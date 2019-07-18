@@ -1,33 +1,40 @@
 function mostrar()
 {
 
-	var contador;
+	var contador=0;
 	var acumulador=0;
-	var respuesta='si';
-	
+	var numero;
+	var seguir='s';
 
-	do{
+	// pido un numero y si no es = a "s" entra
+	while (seguir =='s'){
 
+		// transfomo la variable en numero
+		numero = parseInt(prompt("Ingrese un numero, al terminar ingrese s: "));
+
+		while(isNaN(numero)){ // si no se ingresa un numero inicia este bucle dentro del bucle
+
+				alert("Eso no es un numero");
+
+				numero = parseInt(prompt("Ingrese un numero, al terminar ingrese s: "));
+
+				}
+
+		// acumulador inicia en 0 y suma el numero dado
+		acumulador = acumulador + numero;
 		
-		if(contador !=respuesta){
-
-		contador = parseInt(prompt("Ingrese los numeros a sumar, al terminar ingrese si: "));
-
-		acumulado = contador + acumulado;
+		//contador++ es para q vuelva a iniciar el bucle
+		contador++;
 		
 
-					}
+		// pregunta si desea iniciar otro numero para dar la opcion de poner "s"
+		seguir = prompt("desea ingresar otro numero?");
 
-		else{
-
-		parseInt(document.getElementById("suma").value) = acumulado;
-	
-		}
-
-	} while( contador==respuesta);
+	}
 
 
 
+// muestra x ID
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/contador;
 
