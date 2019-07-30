@@ -14,7 +14,7 @@ function mostrar()
 		numero = parseInt(prompt("Ingrese un numero:"));
 		// pido un numero
 
-		while(isNaN(numero)){ // si ni es un numero inicio este bucle
+		while(isNaN(numero)){ // si no es un numero inicio este bucle
 
 			alert("Eso no es un numero");
 
@@ -29,7 +29,7 @@ function mostrar()
 				maximo = numero;
 			}
 			// tambien el flag nos hace entrar aca xq su condicion es V y recien aca
-			if(numero< minimo || flag==0){ // maximo y minimo resiven un valor
+			if(numero< minimo || flag==0){ // maximo y minimo reciben un valor
 				
 				minimo = numero;
 

@@ -15,7 +15,7 @@ function mostrar()
 		// pido numero
 		numero = parseInt(prompt("Ingrese un numero, al terminar ingrese s: "));
 
-		while(isNaN(numero)){ // si ni es un numero inicio este bucle
+		while(isNaN(numero)){ // si no es un numero inicio este bucle
 
 				alert("Eso no es un numero");
 
@@ -26,7 +26,7 @@ function mostrar()
 				// si numero es menor a 0 son negativos x lo tanto lo multiplico
 				if(numero<0){
 				
-				//negativo * el numeto ingresado
+				//negativo * el numero ingresado
 				negativo =  numero * negativo;
 				
 				// flag es bandera (sirve para saber si pase x aca x lo menos una vez)
