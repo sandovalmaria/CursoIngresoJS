@@ -15,7 +15,7 @@ if (edad < 13)
 }
 
 //se descarto todas las edades menores a 13 en el if anterior 
-// ahora solo mide de 13 al infinito... si 18 es mayor a la edad tira este alerta
+// ahora solo mide de 13 al infinito... si 18 es menor a la edad tira este alerta
 else if (edad < 18)
 
 {
