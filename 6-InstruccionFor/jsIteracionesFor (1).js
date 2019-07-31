@@ -1,14 +1,9 @@
 function mostrar()
 {
-    var numero;
-   
-    for(numero = 1; numero<=10; numero ++ ){
-                
-       document.write(numero + "<br>");
 
+    for ( var num = 1; num < 11; num++) {
+        document.write(num + "<br>");
         
     }
-
-
 
 }

@@ -1,17 +1,13 @@
 function mostrar()
 {
 
+var num;
 var repeticiones = parseInt(prompt("ingrese el número de repeticiones"));
-var i = 0; 
 
-i = parseInt;
-
-for(repeticiones > 0 ; repeticiones <= i ; i++){
-
-    
-    document.write("Hola UTN FRA" + i);
-
+for ( var num = 0; num < repeticiones ; num++ ){ // num = repeticiones ; num > 0; num--
+    document.write("Hola UTN FRA <br>");
 }
+
 
 
 }//FIN DE LA FUNCIÓN

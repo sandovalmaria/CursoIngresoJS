@@ -1,13 +1,10 @@
 function mostrar()
 {
-    var numero;
-   
-    for(numero = 10; numero>=1; numero -- ){
-                
-       document.write(numero + "<br>");
+ var num
 
-        
-    }
+ for ( num = 10; num > 0; num--){
 
+    document.write(num + "<br>");
+ }
 
 }
