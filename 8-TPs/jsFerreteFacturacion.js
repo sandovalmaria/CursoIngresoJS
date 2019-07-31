@@ -14,9 +14,9 @@ var num3;
 var resultado;
 
 //transformo a numero los numeros ingresados en los ID
-num1 = parseInt(document.getElementById("PrecioUno").value);
-num2 = parseInt(document.getElementById("PrecioDos").value);
-num3 = parseInt(document.getElementById("PrecioTres").value);
+num1 = parseFloat(document.getElementById("PrecioUno").value);
+num2 = parseFloat(document.getElementById("PrecioDos").value);
+num3 = parseFloat(document.getElementById("PrecioTres").value);
 
     resultado = num1 + num2 + num3; //suma
                     
@@ -33,40 +33,37 @@ function Promedio ()
 var num1;
 var num2;
 var num3;
-var promedio; //cree una variable extra para esta funcion
-var resultado;
+var promedio; //cree esta variable para la funcion
 
-num1 = parseInt(document.getElementById("PrecioUno").value);
-num2 = parseInt(document.getElementById("PrecioDos").value);
-num3 = parseInt(document.getElementById("PrecioTres").value);
 
-    promedio = num1 + num2 + num3
+num1 = parseFloat(document.getElementById("PrecioUno").value);
+num2 = parseFloat(document.getElementById("PrecioDos").value);
+num3 = parseFloat(document.getElementById("PrecioTres").value);
+
+    promedio = (num1 + num2 + num3) / 3;
     
-    resultado = promedio / 2; //sumo y divido x 2
-
-
-    alert("El promedio es " + resultado);
+    alert("El promedio es " + promedio);
 
 	
 }
 function PrecioFinal () // el iva es del 21% creo esa variable
 {
+
 var num1;
 var num2;
 var num3;
-var resultado;
-var iva = 0.21;
+var subtotal;
+var iva;
 
-num1 = parseInt(document.getElementById("PrecioUno").value);
-num2 = parseInt(document.getElementById("PrecioDos").value);
-num3 = parseInt(document.getElementById("PrecioTres").value);
+num1 = parseFloat(document.getElementById("PrecioUno").value);
+num2 = parseFloat(document.getElementById("PrecioDos").value);
+num3 = parseFloat(document.getElementById("PrecioTres").value);
 
 
+        subtotal = num1 + num2 + num3;
 
-        resultado = num1 + num2 + num3;
+        iva = subtotal * .21;
 
-        iva = resultado + iva;
-   
         alert("El precio final es " + iva);
    
     }
