@@ -147,7 +147,7 @@ function CalcularPrecio ()
 
         descuento = precio * 0.10;
 
-        iibb = (precio + descuento)*lamp;
+        iibb = (precioFinal + descuento)*lamp;
 
         document.getElementById("precioDescuento").value = iibb;
 
