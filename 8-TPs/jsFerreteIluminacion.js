@@ -11,88 +11,151 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 function CalcularPrecio () 
 {
     var lamp;
-    var arg;
-    var felipe;
-    var descuento;
+    var precio = 35;
+    var marca;
+    var descuento = 0;
+    var precioFinal;
     var iibb;
 
     lamp = parseInt(document.getElementById("Cantidad").value);
-
+    marca = document.getElementById("Marca").value;
+    descuento = parseInt;
     
-    if(lamp > 5)
-    { 
-        
-        descuento = lamp / 2;
-
-        parseInt(document.getElementById("precioDescuento").value) = descuento;
-
-    }
-
-     while (lamp == 5)  
-    {
-        if(lamp == arg)
-        {
-            descuento = lamp / 0,40;
-
-            parseInt(document.getElementById("precioDescuento").value) = descuento;
-
-        }
-
-        else
-        {
-            descuento = lamp / 0,30;
-
-            parseInt(document.getElementById("precioDescuento").value) = descuento;
-
-        }
-    }
-
-    while (lamp == 4)
-    {
-        if(lamp == arg || lamp == felipe )
-        {
-
-            descuento = lamp / 0,25;
-
-            parseInt(document.getElementById("precioDescuento").value) = descuento;
-
-        }
-
-        else
-        {
-            descuento = lamp / 0,20;
-
-            parseInt(document.getElementById("precioDescuento").value) = descuento;
-
-        }
-    }
-
-    while(lamp == 3)
-    {
-        if(lamp == arg)
-        {
-
-            descuento = lamp / 0,15;
-
-            parseInt(document.getElementById("precioDescuento").value) = descuento;
-        
-        }
-        else if(lamp == felipe)
-        {
-            descuento = lamp / 0,10;
-
-            parseInt(document.getElementById("precioDescuento").value) = descuento;
-
-        }
-        else
-        {
-
-            descuento = lamp / 0,05;
-
-            parseInt(document.getElementById("precioDescuento").value) = descuento;
-        }
-    }
     
+    switch(lamp){
 
- 	
+        case(1):
+        {
+            if(lamp==1){
+            
+            lamp = precio;
+
+            document.getElementById("precioDescuento").value = lamp;
+
+            }
+            break;
+        }
+        
+        case(2):
+        {
+            if (lamp==2){
+
+            descuento = precio *  lamp;
+
+            document.getElementById("precioDescuento").value = descuento;
+            
+            }
+
+            break;
+        }
+
+        case(3):
+        {
+            if(lamp == 3 && marca == "ArgentinaLuz"){
+
+                descuento = precio * 0.15;
+
+                precioFinal = (precio - descuento)*lamp;
+                document.getElementById("precioDescuento").value = precioFinal;
+            
+            }
+            else if(lamp == 3 && marca == "FelipeLamparas"){
+
+                descuento = precio * 0.10;
+
+                precioFinal = (precio - descuento)*lamp;
+                document.getElementById("precioDescuento").value = precioFinal; 
+            }
+
+            else{
+
+                descuento = precio * 0.05;
+
+                precioFinal = (precio - descuento)*lamp;
+                document.getElementById("precioDescuento").value = precioFinal;
+               
+            }
+
+            break;
+        }
+           
+        
+        case(4):
+        {
+            if (lamp == 4 && marca == "FelipeLamparas" || marca == "ArgentinaLuz"){
+
+                descuento = precio * 0.25;
+
+                precioFinal = (precio - descuento)*lamp;
+
+                document.getElementById("precioDescuento"). value = precioFinal;
+            
+                }
+            else{
+
+                descuento = precio * 0.20;
+
+                precioFinal = (precio - descuento)*lamp;
+
+                document.getElementById("precioDescuento").value = precioFinal;
+                
+            }
+            break;
+        }
+        
+        case(5):
+        {
+            if(lamp == 5 && marca == "ArgentinaLuz"){
+
+                descuento = precio * 0.40;
+
+                precioFinal = (precio - descuento)*lamp;
+
+                document.getElementById("precioDescuento").value = precioFinal;
+            
+
+                }
+            else{
+
+                descuento = precio * 0.30;
+
+                precioFinal = (precio - descuento)*lamp;
+
+                document.getElementById("precioDescuento").value = precioFinal;
+            }
+            break;
+        }
+
+        default:
+        {
+            if(lamp >=6){
+
+            descuento = precio * 0.50;
+
+            precioFinal = (precio - descuento)*lamp;
+
+            document.getElementById("precioDescuento").value = precioFinal;
+            
+            }
+            break;
+
+        }
+    }
+
+
+    if(precioFinal>=120){
+
+        descuento = precio * 0.10;
+
+        iibb = (precio + descuento)*lamp;
+
+        document.getElementById("precioDescuento").value = iibb;
+
+    alert("IIBB Usted pago " + iibb + " siendo " + descuento + " el impuesto que se pagó");
+    }
+
+
+
+
+ 
 }
