@@ -1,59 +1,88 @@
 function mostrar()
 {
+
+	var letra;
+    var num;
     var seguir;
-    var letra;
-    var seguir;
-    var contadoPares =0;
-    var contadorImprares= 0;
-    var contadorCeros = 0;
-    var contadorPos= 0;
-    var acumPos = 0;
-    var acumNeg = 0;
+    var numPar =  0 ;
+    var numImpar =  0 ;
+    var ceros =  0 ;
+    var promedio =  0 ;
+    var numPos =  0 ;
+    var numNeg = 0;
+    var contPos =  0 ;
+    var contNeg = 0 ;
+    var minimo;
     var maximo;
-    var letraMax;
-    var letraMin;
-    var Flag = 0;
+    var lMinimo;
+    var lMaximo;
+    var flag = 0 ;
+
+    do{
+
+        letra =  prompt ( " Ingrese una letra: " );
+        num =  parseInt ( prompt ( " Ingrese un numero entre el -100 y 100: " ));
+
+        while (num <  - 100  || num >  100  &&  isNaN (num)) {
+
+            num =  parseInt ( prompt ( " Reingrese un numero: " ));
+        }
+        seguir =  prompt ( " ¿Quiere seguir? " );
+
+        if (num %  2  ==  0 ) 
+        {
+
+            numPar ++
+        }
+        else
+        {
+            numImpar ++
+        }
 
 
+        if (num >  0 ) 
+        {
 
-    letra =(prompt("ingrese un numero"));
+            numPos = num
+            contPos ++
+        }
+        else if(num <  0 ) {
 
-    numero = parseInt(prompt("ingrese un numero"));
+            numNeg = num + numNeg;
+            contNeg ++;
 
-    while(numero<-100 || numero > 100 || isNaN(numero))
-    {
-       
-       while(numero!=0)
-       {
-            numero = numero / 2
-           
-           if(numero%0)
-            {
-               contadoPares++;
-            }
-            else
-            {
-                contadorImprares++;
-            }
+        }
+
+        else{
+            ceros ++
+        }
+
+        if (num < minimo || flag ==  0 ) {
+            minimo = num
+            lMinimo = letra
+        }
+        if (num > maximo || flag ==  0 ) {
+            maximo = num
+            lMaximo = letra
+        
+
         }
         
-        if (numero>0)
-        {
-            acumPos = numero/5;
-        }
-        else if(numero<0)
-        {
-            acumNeg = acumNeg + numero;
-            
-        }
-        else{
-            
-            contadorCeros = contadorCeros++
-        }
-        while()
-    }
-    
+        flag=1;
 
+    } while (seguir =='s' );
+
+    if (contPos != 0 ) {
+    promedio = numPos / contPos;
+    }
+
+    document.write(" Cantidad de numeros pares: "  + numPar  +  " <br> " );
+    document.write(" Cantidad de numeros impares: "  + numImpar +  " <br> ");
+    document.write(" Cantidad de ceros: "  + ceros +  " <br> " );
+    document.write(" Promedio de los números positivos: " + promedio +  " <br> " );
+    document.write(" Suma de los numeros negativos: "  + numNeg +  " <br> " );
+    document.write(" Numero y letra del maximo: "  + maximo  +  "  "  + lMaximo +  " <br> " );
+    document.write(" Numero y letra del minimo: "  + minimo  +  "  "  + lMinimo +  " <br> " );
 
 
 }

@@ -4,7 +4,6 @@ var nota=0;
 var sexo;
 var contador=0;
 var acumulador=0;
-var promedio;
 var notatotal=0;
 var varones = 0;
 var notabaja=0;
@@ -16,8 +15,8 @@ while(contador<5)
     while ((isNaN(nota) || (nota>10 || nota<0)))
     {
         
-    alert=(nota+"no es la nota correcta");
-    nota=parseInt(prompt("mostrar nota"));  
+    alert=(nota+" no es una nota correcta");
+    nota=parseInt(prompt("ingresar nota"));  
     }
     nota=parseInt(nota);
     notatotal=nota+notatotal;
@@ -43,15 +42,13 @@ while(contador<5)
 
         if ( nota>=6 && sexo=="m")
         {
-            varones++;
+            varones = varones+1;
         }
-
-
 
 
         contador++;
     }
-    alert("la nota mas baja fue :"+notabaja+"y su sexo es: "+sexomostrar);
+    alert("la nota mas baja fue :"+notabaja+" y su sexo es: "+sexomostrar);
     alert("el promedio es: "+(notatotal/5));
     alert("la cantidad de varones que obtuvieron nota baja fueron: "+varones);
 
