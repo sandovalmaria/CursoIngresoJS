@@ -1,45 +1,63 @@
 function mostrar()
 {
-  var sexo;
-  var nota;
-  var acumMas = 0
-  var notabaja = 0;
-  var sexobajo = 0;
-  var flag = 0;
+var nota=0;
+var sexo;
+var contador=0;
+var acumulador=0;
+var promedio;
+var notatotal=0;
+var varones = 0;
+var notabaja=0;
+var sexomostrar;
 
+while(contador<5)
+{
+    nota=parseInt(prompt("mostrar nota"));
+    while ((isNaN(nota) || (nota>10 || nota<0)))
+    {
+        
+    alert=(nota+"no es la nota correcta");
+    nota=parseInt(prompt("mostrar nota"));  
+    }
+    nota=parseInt(nota);
+    notatotal=nota+notatotal;
 
-  nota = parseInt(prompt("ingrese nota"));
-  sexo = prompt("ingrese sexo: ");
-  
-  
-  for( var i = 0 ; i <=5 ; i++ ){  
-
-   while(nota>0 && nota<=10 && isNaN(nota)){
+    sexo=prompt("mostrar el sexo");
     
-    nota = parseInt(prompt("nota"));
-     
-      while (sexo == "F" || sexo =="M" || sexo =="m" ||  sexo == "f"){
-      
-      sexo = prompt("ingrese sexo: ");
-    
-    }break;
-
-
-  }
-}
-
-    if(nota<notabaja || flag==0){
-
-      notabaja = nota;
-      sexobajo = sexo;
-      flag = 1;
+    while(sexo!="f" && sexo!="m")
+    {
+        alert=(sexo+"es incorrecto");
+        sexo=prompt("mostrar el sexo");
     }
 
-    if(sexo="M"&& nota>6){
-      
-      acumMas = nota + acumMas;
+    if(contador==0)
+        {
+            notabaja=nota;
+            sexomostrar=sexo;
+        }
+        else if(nota<notabaja)
+        {
+            notabaja = nota;
+            sexomostar = sexo;
+        }  
+
+        if ( nota>=6 && sexo=="m")
+        {
+            varones++;
+        }
+
+
+
+
+        contador++;
     }
-    nota = nota / 5;
+    alert("la nota mas baja fue :"+notabaja+"y su sexo es: "+sexomostrar);
+    alert("el promedio es: "+(notatotal/5));
+    alert("la cantidad de varones que obtuvieron nota baja fueron: "+varones);
+
+}//fin de la funcion
+
   
-  alert("nota mas baja "+ notabaja +" promedio total: " + nota + "varones mayor a " + acumMas);
-}
+   
+  
+ 

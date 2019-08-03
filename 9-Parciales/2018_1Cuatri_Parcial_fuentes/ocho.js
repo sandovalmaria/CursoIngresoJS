@@ -21,33 +21,39 @@ function mostrar()
     numero = parseInt(prompt("ingrese un numero"));
 
     while(numero<-100 || numero > 100 || isNaN(numero))
-
-
-
-    if (numero>0){
-
-
-        acumPos = acumPos+numero;
-    }
-    else if(numero>0){
-        acumNeg = acumNeg + numero;
-
-    }
-    else{
-
-        contadorCeros = contadorCeros++
+    {
+       
+       while(numero!=0)
+       {
+            numero = numero / 2
+           
+           if(numero%0)
+            {
+               contadoPares++;
+            }
+            else
+            {
+                contadorImprares++;
+            }
+        }
+        
+        if (numero>0)
+        {
+            acumPos = numero/5;
+        }
+        else if(numero<0)
+        {
+            acumNeg = acumNeg + numero;
+            
+        }
+        else{
+            
+            contadorCeros = contadorCeros++
+        }
+        while()
     }
     
-    
-    if (numero>0){
 
-    acumNeg = acumNeg + nummero;
-    }
-
-    else{
-
-        contadorCeros = contadorCeros++
-    }
 
 
 }
